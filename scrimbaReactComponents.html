@@ -1,0 +1,53 @@
+<html>
+<head>
+<script src="https://unpkg.com/react@15/dist/react.min.js"> </script>
+<script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+
+    <script type="text/babel">
+        class Main extends React.Component {
+            render() {
+                const imgStyle = { width: '400px'};
+                return (
+                    <div style ={{padding: '15px'}}>
+                    <Profile />
+                    <Hobbies />
+                    </div>
+                );
+            }
+        }
+
+        class Profile extends React.Component {
+            render() {
+                return (
+                    <div>
+                    <h1>Greg McKelvey</h1>
+                    <img src="https://avatars.githubusercontent.com/perborgen?s=240" />
+                    </div>
+                );
+            }
+        }
+
+        class Hobbies extends React.Component {
+            render() {
+                return (
+                    <div>
+                    <h3>My Hobbies:</h3>
+                    <ul>
+                        <li>Eat</li>
+                        <li>MTB</li>
+                        <li>Baby</li>
+                    </ul>
+                    </div>
+                )
+            }
+        }
+
+        ReactDOM.render(<Main />, document.getElementById('root'));
+    </script>
+</body>
+</html>
